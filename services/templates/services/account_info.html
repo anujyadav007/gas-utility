@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Info</title>
+    <style>
+        /* General styling for consistency */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #2c3e50;
+            overflow: hidden;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            float: left;
+            color: white;
+            text-align: center;
+            padding: 12px 16px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            background-color: #1abc9c;
+        }
+
+        .navbar form {
+            float: right;
+        }
+
+        .navbar button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 16px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Centered and Beautified Heading */
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #1abc9c;
+            display: inline-block;
+        }
+
+        .heading-container {
+            text-align: center;
+        }
+
+        /* Account Info Container */
+        .account-info-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .account-info-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .account-info-container p {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .account-info-container p strong {
+            color: #2c3e50;
+        }
+
+        .icon {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+
+        @media (max-width: 768px) {
+            .navbar a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+            .navbar form {
+                float: none;
+                margin-top: 10px;
+            }
+
+            .account-info-container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    
+
+    
+    <div class="heading-container">
+        <h1>Account Information</h1>
+    </div>
+
+    
+    <div class="account-info-container">
+        <p><strong><i class="fas fa-user icon"></i>Username:</strong> {{ user.username }}</p>
+        <p><strong><i class="fas fa-envelope icon"></i>Email:</strong> {{ user.email }}</p>
+        <p><strong><i class="fas fa-calendar-alt icon"></i>Joined:</strong> {{ user.date_joined|date:"F d, Y" }}</p>
+        
+    </div>
+</body>
+</html>
+{% endblock %}
