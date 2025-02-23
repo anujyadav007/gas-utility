@@ -1,4 +1,4 @@
-![sign_up](https://github.com/user-attachments/assets/b6ba96bc-64ba-4f7c-8567-98a4804e5b8e)# **Gas Utility Service Management System**
+### **Gas Utility Service Management System**
 
 The **Gas Utility Service Management System** is a web-based application designed to streamline the process of managing service requests for gas utility companies. It allows users to submit service requests, track their status, and enables support staff to manage and resolve these requests efficiently. Built with Django, this system provides a robust and scalable solution for handling gas utility services.
 
@@ -91,42 +91,8 @@ Access the Application:
 Open your browser and go to http://127.0.0.1:8000/.
 Use the superuser credentials to log in as an admin.
 
-### Project Structure
-gas-utility/
-├── manage.py
-├── gas_utility/
-│   ├── __init__.py
-│   ├── settings.py
-│   ├── urls.py
-│   ├── wsgi.py
-│   └── asgi.py
-├── accounts/
-│   ├── models.py
-│   ├── views.py
-│   ├── forms.py
-│   ├── urls.py
-│   └── templates/
-│       └── accounts/
-│           ├── login.html
-│           ├── signup.html
-│           └── profile.html
-├── services/
-│   ├── models.py
-│   ├── views.py
-│   ├── forms.py
-│   ├── urls.py
-│   └── templates/
-│       └── services/
-│           ├── request_form.html
-│           ├── request_list.html
-│           └── request_detail.html
-├── static/
-│   ├── css/
-│   │   └── styles.css
-│   └── images/
-├── templates/
-│   └── base.html
-└── requirements.txt
+
+
 
 ### Screenshots
 
