@@ -70,20 +70,24 @@ The **Gas Utility Service Management System** is a web-based application designe
 - Git (optional)
 
 ### **Installation Steps**
-1. **Clone the Repository**:
-   ```bash
+
+## Clone the Repository
    git clone https://github.com/anujyadav007/gas-utility.git
    cd gas-utility
-
+## Create a Virtual Environment:
   python -m venv venv
- source venv/bin/activate  
-
+ source venv/bin/activate 
+ 
+## Install Dependencies:
  pip install -r requirements.txt
-
+ 
+## Set Up the Database:
  python manage.py migrate
-
+ 
+## Create a Superuser (Admin):
 python manage.py createsuperuser
 
+## Run the Development Server:
 python manage.py runserver
 
 Access the Application:
